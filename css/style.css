@@ -1,0 +1,37 @@
+ul li {
+    list-style: none;
+    position: relative;
+}
+
+ul li a {
+    position: relative;
+    font-size: 5em;
+    font-weight: 700;
+    color: lightgrey;
+    transition: .3s all;
+    /*    z-index: 1;*/
+}
+
+a:hover{
+    color: lightgrey;
+}
+ul li a::after {
+    position: absolute;
+    content: attr(data-font);
+    left: 0;
+    top: -12px;
+    width: 0;
+    color: #333 ;
+    overflow: hidden;
+    transition: .5s all;
+}
+
+ul li:hover a::after {
+    width: 100%;
+}
+
+/*
+ul li:after:hover{
+    position: absolute;
+    width: 100%;
+}*/
