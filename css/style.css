@@ -12,16 +12,28 @@ ul li a {
     /*    z-index: 1;*/
 }
 
-a:hover{
-    color: lightgrey;
-}
-ul li a::after {
+ul:hover li a::after {
     position: absolute;
     content: attr(data-font);
     left: 0;
     top: -12px;
     width: 0;
-    color: #333 ;
+    color: #333;
+    overflow: hidden;
+    transition: .5s all;
+}
+
+a:hover {
+    color: lightgrey;
+}
+
+ul li a::after {
+    position: absolute;
+    content: attr(data-font);
+    left: 0;
+    top: -12px;
+    width: 100%;
+    color: #333;
     overflow: hidden;
     transition: .5s all;
 }
